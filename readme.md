@@ -2,6 +2,7 @@
 
 ```powershell
 python -m venv .venv
+
 #Linux
 source ./.venv/bin/activate
 #Windows
@@ -26,7 +27,6 @@ pyinstaller --onefile simnext-fullscreen.py
 
 ```
 
-
 ## Para executar na inicialização do windows
 
 ```powershell
@@ -34,5 +34,4 @@ pyinstaller --onefile simnext-fullscreen.py
 # shell:startup
 # Inclua essas linhas no script simnext.bat
 timeout /t 30 /nobreak
-start "" "C:\Users\camer\OneDrive\SimNextWin11\simnext-fullscreen.exe"
-```
+start "" "C:\Users\camer\OneDrive\SimNextWin11\simnext-fullscreen.exe" "SIM Next" 21
