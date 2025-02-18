@@ -28,10 +28,10 @@ pyinstaller --onefile simnext-fullscreen.py
 
 ## Para executar na inicialização do windows
 
-```powershell
-# No windows 11, Windows + R
-# shell:startup
-# Inclua essas linhas no script simnext.bat
+```batch
+:: No windows 11, Windows + R
+:: shell:startup
+:: Inclua essas linhas no script simnext.bat
 timeout /t 30 /nobreak
 start "" "C:\Users\camer\OneDrive\SimNextWin11\simnext-fullscreen.exe" "SIM Next" 21
 ```
