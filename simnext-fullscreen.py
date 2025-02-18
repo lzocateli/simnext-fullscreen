@@ -19,8 +19,25 @@ def find_and_focus_window(window_title, num_down_presses):
             window.maximize()
 
             time.sleep(1)  
-            center_x, center_y = window.left + window.width // 2, window.top + window.height // 2
-            pyautogui.click(center_x, center_y, button='right')
+            # center_x, center_y = window.left + window.width // 2, window.top + window.height // 2
+            
+
+            # Obter o identificador da janela ativa
+            active_window = ctypes.windll.user32.GetForegroundWindow()
+
+            # Obter as coordenadas e o tamanho da janela ativa
+            rect = ctypes.wintypes.RECT()
+            ctypes.windll.user32.GetWindowRect(active_window, ctypes.pointer(rect))
+
+            # Calcular o centro da janela ativa
+            center_x = (rect.left + rect.right) // 2
+            center_y = (rect.top + rect.bottom) // 2
+
+            # # Mover o cursor do mouse para o centro da janela ativa
+            # pyautogui.moveTo(center_x, center_y)
+
+            
+            pyautogui.click(center_x -100, center_y - 200, button='right')
             time.sleep(0.5)  
 
             for _ in range(num_down_presses):
