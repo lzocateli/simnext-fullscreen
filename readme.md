@@ -24,7 +24,6 @@ pip install -r ./src/requirements.txt
 pip install pyinstaller
 
 pyinstaller --onefile simnext-fullscreen.py
-
 ```
 
 ## Para executar na inicialização do windows
@@ -35,3 +34,4 @@ pyinstaller --onefile simnext-fullscreen.py
 # Inclua essas linhas no script simnext.bat
 timeout /t 30 /nobreak
 start "" "C:\Users\camer\OneDrive\SimNextWin11\simnext-fullscreen.exe" "SIM Next" 21
+```
